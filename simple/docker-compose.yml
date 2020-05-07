@@ -16,6 +16,9 @@ services:
       - db
     ports:
       - "8010:8010"
+    volumes:
+      - ./secrets:/secrets:rw
+
   db:
     env_file:
       - db.env
